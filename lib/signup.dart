@@ -86,6 +86,7 @@ class _SignUpPageBuilding extends State<SignUpPageBuilding> {
               ),
               const SizedBox(height: 40),
               TextField(
+                style: TextStyle(color: Colors.white.withOpacity(0.5)),
                 focusNode: focusNode1,
                 onSubmitted: (value) {
                   FocusScope.of(context).requestFocus(focusNode2);
@@ -115,6 +116,7 @@ class _SignUpPageBuilding extends State<SignUpPageBuilding> {
               ),
               const SizedBox(height: 20),
               TextField(
+                style: TextStyle(color: Colors.white.withOpacity(0.5)),
                 focusNode: focusNode2,
                 onTapOutside:(event){
                   focusNode2.unfocus();
@@ -144,6 +146,7 @@ class _SignUpPageBuilding extends State<SignUpPageBuilding> {
               ),
               const SizedBox(height: 20),
               TextField(
+                style: TextStyle(color: Colors.white.withOpacity(0.5)),
                 focusNode:focusNode3,
                 onTapOutside:(event){
                   focusNode3.unfocus();
@@ -182,6 +185,7 @@ class _SignUpPageBuilding extends State<SignUpPageBuilding> {
               ),
               const SizedBox(height: 20),
               TextField(
+                style: TextStyle(color: Colors.white.withOpacity(0.5)),
                 focusNode: focusNode4,
                 onTapOutside:(event){
                   focusNode4.unfocus();

@@ -67,6 +67,7 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 40),
               TextField(
+                style: TextStyle(color: Colors.white.withOpacity(0.5)),
                 focusNode: focusNode1,
                 onSubmitted: (value) {
                   FocusScope.of(context).requestFocus(focusNode2);
@@ -91,6 +92,7 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 20),
               TextField(
+                style: TextStyle(color: Colors.white.withOpacity(0.5)),
                 focusNode: focusNode2,
                 onSubmitted: (value) {
                   focusNode1.unfocus();
