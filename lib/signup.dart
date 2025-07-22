@@ -26,7 +26,8 @@ class SignUpPageBuilding extends StatefulWidget {
 
 class _SignUpPageBuilding extends State<SignUpPageBuilding> {
   final controller1 = TextEditingController();
-  bool isObscure = true;
+  bool isObscure1 = true;
+  bool isObscure2 = true;
   final focusNode1 = FocusNode();
   final focusNode2 = FocusNode();
   final focusNode3 = FocusNode();
@@ -150,7 +151,7 @@ class _SignUpPageBuilding extends State<SignUpPageBuilding> {
                 onSubmitted: (value) {
                   FocusScope.of(context).requestFocus(focusNode4);
                 },
-                obscureText: isObscure,
+                obscureText: isObscure1,
                 decoration: InputDecoration(
                   hintText: "Password",
                   hintStyle: TextStyle(
@@ -164,12 +165,12 @@ class _SignUpPageBuilding extends State<SignUpPageBuilding> {
                   prefixIcon: const Icon(Icons.key, color: Color(0xFF8D8D8D)),
                   suffixIcon: IconButton(
                     icon: Icon(
-                      isObscure ? Icons.visibility_off : Icons.visibility,
+                      isObscure1 ? Icons.visibility_off : Icons.visibility,
                       color: const Color(0xFF8D8D8D),
                     ),
                     onPressed: () {
                       setState(() {
-                        isObscure = !isObscure;
+                        isObscure1 = !isObscure1;
                       });
                     },
                   ),
@@ -183,12 +184,15 @@ class _SignUpPageBuilding extends State<SignUpPageBuilding> {
               TextField(
                 focusNode: focusNode4,
                 onTapOutside:(event){
-                  focusNode1.unfocus();
+                  focusNode4.unfocus();
                 },
                 onSubmitted: (value) {
                   focusNode4.unfocus();
                 },
-                obscureText: isObscure,
+                onEditingComplete: (){
+                  focusNode4.unfocus();
+                },
+                obscureText: isObscure2,
                 decoration: InputDecoration(
                   hintText: "Confirm password",
                   hintStyle: TextStyle(
@@ -202,12 +206,12 @@ class _SignUpPageBuilding extends State<SignUpPageBuilding> {
                   prefixIcon: const Icon(Icons.key, color: Color(0xFF8D8D8D)),
                   suffixIcon: IconButton(
                     icon: Icon(
-                      isObscure ? Icons.visibility_off : Icons.visibility,
+                      isObscure2 ? Icons.visibility_off : Icons.visibility,
                       color: const Color(0xFF8D8D8D),
                     ),
                     onPressed: () {
                       setState(() {
-                        isObscure = !isObscure;
+                        isObscure2 = !isObscure2;
                       });
                     },
                   ),
